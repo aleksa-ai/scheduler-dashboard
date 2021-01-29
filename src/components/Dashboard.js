@@ -32,6 +32,9 @@ class Dashboard extends Component {
   state = {
     loading: false,
     focused: null,
+    days: [],
+    appointments: {},
+    interviewers: {},
   };
 
   selectPanel(id) {
@@ -74,7 +77,7 @@ class Dashboard extends Component {
           id={panel.id}
           label={panel.label}
           value={panel.value}
-          onSelect={event => this.selectPanel(panel.id)}
+          onSelect={(event) => this.selectPanel(panel.id)}
         />
       ));
 
